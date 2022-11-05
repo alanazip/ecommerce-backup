@@ -38,28 +38,20 @@ class ProdutoManagerController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'marca' => 'required',
-            'modelo' => 'required',
-            'cor' => 'required',
-            'anoFabricacao' => 'required',
-            'modeloAno' => 'required',
-            'combustivel' => 'required',
+            'nome' => 'required',
+            'descricao' => 'required',
             'preco' => 'required',
-            'detalhes' => 'required',
-            'imagem' => 'required'
+            'quantidade' => 'required',
+            'imagem' => 'required',
         ]);
 
         // Produto::create($request->all());
 
         $produto = new Produto;
-        $produto->marca = $request->marca;
-        $produto->modelo = $request->modelo;
-        $produto->cor = $request->cor;
-        $produto->anoFabricacao = $request->anoFabricacao;
-        $produto->modeloAno = $request->modeloAno;
-        $produto->combustivel = $request->combustivel;
+        $produto->nome = $request->nome;
+        $produto->descricao = $request->descricao;
         $produto->preco = $request->preco;
-        $produto->detalhes = $request->detalhes;
+        $produto->quantidade = $request->quantidade;
         $produto->imagem = "";
         $dirImagem = "images/produto/";
 
@@ -114,14 +106,10 @@ class ProdutoManagerController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'marca' => 'required',
-            'modelo' => 'required',
-            'cor' => 'required',
-            'anoFabricacao' => 'required',
-            'modeloAno' => 'required',
-            'combustivel' => 'required',
+            'nome' => 'required',
+            'descricao' => 'required',
             'preco' => 'required',
-            'detalhes' => 'required',
+            'quantidade' => 'required',
             'imagem' => 'required'
         ]);
 

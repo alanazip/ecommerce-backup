@@ -38,44 +38,17 @@ class CompraManagerController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'marca' => 'required',
-            'modelo' => 'required',
-            'cor' => 'required',
-            'anoFabricacao' => 'required',
-            'modeloAno' => 'required',
-            'combustivel' => 'required',
-            'preco' => 'required',
-            'detalhes' => 'required',
-            'imagem' => 'required'
+            'status' => 'required',
         ]);
 
         // Compra::create($request->all());
 
         $compra = new Compra;
-        $compra->marca = $request->marca;
-        $compra->modelo = $request->modelo;
-        $compra->cor = $request->cor;
-        $compra->anoFabricacao = $request->anoFabricacao;
-        $compra->modeloAno = $request->modeloAno;
-        $compra->combustivel = $request->combustivel;
-        $compra->preco = $request->preco;
-        $compra->detalhes = $request->detalhes;
-        $compra->imagem = "";
-        $dirImagem = "images/compra/";
-
-        if ($request->hasFile('imagem') && $request->file('imagem')->isValid()) {
-            $requestImage = $request->imagem;
-            $extension = $requestImage->extension();
-
-            $imageName = md5($requestImage->getClientOriginalName() . strtotime('now')) . "." . $extension;
-
-            $requestImage->move(public_path($dirImagem), $imageName);
-            $compra->imagem = $dirImagem . $imageName;
-        }
+        $compra->status = $request->status;
 
         $compra->save();
 
-        return redirect()->route('comprasmanager.index')->with('success', 'Veículo cadastrado com sucesso!');
+        return redirect()->route('comprasmanager.index')->with('success', 'Compra cadastrada com sucesso!');
     }
 
     /**
@@ -114,15 +87,7 @@ class CompraManagerController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'marca' => 'required',
-            'modelo' => 'required',
-            'cor' => 'required',
-            'anoFabricacao' => 'required',
-            'modeloAno' => 'required',
-            'combustivel' => 'required',
-            'preco' => 'required',
-            'detalhes' => 'required',
-            'imagem' => 'required'
+            'status' => 'required',
         ]);
 
         $data = $request->all();

@@ -12,7 +12,7 @@ class FornecedorManagerController extends Controller
      */
     public function index()
     {
-        $fornecedores = Fornecedor::orderBy('nome', 'ASC')->paginate(5);
+        $fornecedors = Fornecedor::orderBy('nome', 'ASC')->paginate(5);
 
         return view('fornecedoresmanager.index', compact('fornecedores'))
             ->with('i', (request()->input('page', 1) - 1) * 5);

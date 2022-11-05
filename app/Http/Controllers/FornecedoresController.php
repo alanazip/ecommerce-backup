@@ -16,8 +16,12 @@ class FornecedoresController extends Controller
         $fornecedor = new Fornecedor;
 
         $fornecedor->nome = $request->nomeFornecedor;
-        $fornecedor->email = $request->emailFornecedor;
         $fornecedor->telefone = $request->telFornecedor;
+        $fornecedor->logradouro = $request->lograFornecedor;
+        $fornecedor->cep = $request->cepFornecedor;
+        $fornecedor->cidade = $request->ciFornecedor;
+        $fornecedor->estado = $request->estFornecedor;
+        $fornecedor->razao_social = $request->razaoFornecedor;
 
         try {
             $fornecedor->save();

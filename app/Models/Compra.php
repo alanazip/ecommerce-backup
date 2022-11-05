@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Compra extends Model
 {
-
     protected $fillable = [
         'status',
         'user_id'

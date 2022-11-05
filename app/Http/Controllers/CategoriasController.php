@@ -16,14 +16,12 @@ class CategoriasController extends Controller
         $categoria = new Categoria;
 
         $categoria->nome = $request->nomeCategoria;
-        $categoria->email = $request->emailCategoria;
-        $categoria->telefone = $request->telCategoria;
 
         try {
             $categoria->save();
 
             return redirect()->action([CategoriasController::class, 'index'])
-                                    ->with('msg','Categoria cadastrado com sucesso!');
+                                    ->with('msg','Categoria cadastrada com sucesso!');
         } catch (\Exception $e) {
             return redirect()->action([CategoriasController::class, 'index'])
                                     ->with('msg','Falha ao criar categoria.');

@@ -6,7 +6,7 @@
     <hr class="my-4">
 </div>
 <div class="container">
-    <a class="btn btn-primary" href="{{ route('estoquesmanager.index') }}">Voltar</a>
+    <a class="btn btn-primary" href="{{ route('produtosmanager.index') }}">Voltar</a>
     <p></p>
     @if ($errors->any())
         <p></p>
@@ -20,7 +20,7 @@
         </div>
     @endif
 
-    <form action="{{ route('estoquesmanager.update', $estoque) }}" method="POST">
+    <form action="{{ route('produtosmanager.update', $produto) }}" method="POST">
         @csrf
         @method('PUT')
 
@@ -28,31 +28,31 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Marca:</strong>
-                    <input type="input" name="marca" value="{{ $estoque->marca }}" class="form-control" placeholder="Marca">
+                    <input type="input" name="marca" value="{{ $produto->marca }}" class="form-control" placeholder="Marca">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Modelo:</strong>
-                    <input type="input" name="modelo" value="{{ $estoque->modelo }}" class="form-control" placeholder="Modelo">
+                    <input type="input" name="modelo" value="{{ $produto->modelo }}" class="form-control" placeholder="Modelo">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Cor:</strong>
-                    <input type="input" name="cor" value="{{ $estoque->cor }}" class="form-control" placeholder="Cor">
+                    <input type="input" name="cor" value="{{ $produto->cor }}" class="form-control" placeholder="Cor">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Ano de Fabricação:</strong>
-                    <input type="input" name="anoFabricacao" value="{{ $estoque->anoFabricacao }}" class="form-control" placeholder="Ano de Fabricação">
+                    <input type="input" name="anoFabricacao" value="{{ $produto->anoFabricacao }}" class="form-control" placeholder="Ano de Fabricação">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Ano do Modelo:</strong>
-                    <input type="input" name="modeloAno" value="{{ $estoque->modeloAno }}" class="form-control" placeholder="Ano do Modelo">
+                    <input type="input" name="modeloAno" value="{{ $produto->modeloAno }}" class="form-control" placeholder="Ano do Modelo">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
@@ -69,19 +69,19 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Preço:</strong>
-                    <input type="input" name="preco" value="{{ $estoque->preco }}" class="form-control" placeholder="Preço">
+                    <input type="input" name="preco" value="{{ $produto->preco }}" class="form-control" placeholder="Preço">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Detalhes:</strong>
-                    <textarea class="form-control" style="height:150px" name="descricao" placeholder="Descrição">{{ $estoque->descricao }}</textarea>
+                    <textarea class="form-control" style="height:150px" name="descricao" placeholder="Descrição">{{ $produto->descricao }}</textarea>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Imagem:</strong>
-                    <input type="input" name="imagem" value="{{ $estoque->imagem }}" class="form-control" placeholder="Imagem">
+                    <input type="input" name="imagem" value="{{ $produto->imagem }}" class="form-control" placeholder="Imagem">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">

@@ -11,17 +11,17 @@
 <body>
 
 <header>
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-warning" >
-    <a class="navbar-brand" href="https://i.ibb.co/PYdSRg0/download.png"><img src="" alt="logo"></a>
+  <nav class="navbar navbar-expand-md navbar-light fixed-top " >
+    <a class="navbar-brand" href="/"><img src="{{ asset('images/download.png') }}" alt="logo"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item {{ (Route::current()->getName() === 'site.home' ? ' active' : '') }}"><a class="nav-link text-dark my-3 font-weight-bold" href="{{ route('site.home') }}">Página inicial<span class="sr-only">(current)</span></a></li>
-        <li class="nav-item {{ (Route::current()->getName() === 'site.compras' ? ' active' : '') }}"><a class="nav-link text-dark my-3 font-weight-bold" href="{{ route('site.compras') }}">Compras</a></li>
-        <li class="nav-item {{ (Route::current()->getName() === 'site.contatos' ? ' active' : '') }}"><a class="nav-link text-dark my-3 font-weight-bold" href="{{ route('site.contatos') }}">Contatos</a></li>
-        <li class="nav-item {{ (Route::current()->getName() === 'site.vendedores' ? ' active' : '') }}"><a class="nav-link text-dark my-3 font-weight-bold" href="{{ route('fornecedoresmanager.index') }}">Fornecedores</a></li>
+        <li class="nav-item {{ (Route::current()->getName() === 'site.home' ? ' active' : '') }}"><button><a class="nav-link text-dark my-3 font-weight-bold" href="{{ route('site.home') }}">Página inicial<span class="sr-only">(current)</span></a></button></li>
+        <li class="nav-item {{ (Route::current()->getName() === 'site.compras' ? ' active' : '') }}"><button><a class="nav-link text-dark my-3 font-weight-bold" href="{{ route('site.compras') }}">Compras</a></button></li>
+        <li class="nav-item {{ (Route::current()->getName() === 'site.contatos' ? ' active' : '') }}"><button><a class="nav-link text-dark my-3 font-weight-bold" href="{{ route('site.contatos') }}">Contatos</a></button></li>
+        <li class="nav-item {{ (Route::current()->getName() === 'site.fornecedores' ? ' active' : '') }}"><button><a class="nav-link text-dark my-3 font-weight-bold" href="{{ route('fornecedoresmanager.index') }}">Fornecedores</a></button></li>
         <li><div class="dropdown">
             <button class="btn btn-danger dropdown-toggle my-3 font-weight-bold" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Area Administrativa

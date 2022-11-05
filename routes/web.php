@@ -1,7 +1,7 @@
 <?php
 
-//use App\Http\Controllers\ContatoManagerController;
-//use App\Http\Controllers\ContatosController;
+use App\Http\Controllers\ContatoManagerController;
+use App\Http\Controllers\ContatosController;
 use App\Http\Controllers\ProdutosController;
 use App\Http\Controllers\ComprasController;
 use App\Http\Controllers\HomeController;
@@ -31,13 +31,13 @@ Route::get('/produtos', [ProdutosController::class, 'index'])->name('site.produt
 
 Route::get('/compras', [ComprasController::class, 'index'])->name('site.compras');
 
-//Route::get('/contatos', [ContatosController::class, 'index'])->name('site.contatos');
+Route::get('/contatos', [ContatosController::class, 'index'])->name('site.contatos');
 
 Route::get('/fornecedores', [FornecedoresController::class, 'index'])->name('site.fornecedores');
 
 Route::get('/categorias', [CategoriasController::class, 'index'])->name('site.categorias');
 
-//Route::post('/contatos', [ContatosController::class, 'store'])->name('site.contatos');
+Route::post('/contatos', [ContatosController::class, 'store'])->name('site.contatos');
 
 Route::post('/fornecedores', [FornecedoresController::class, 'store'])->name('site.fornecedores');
 

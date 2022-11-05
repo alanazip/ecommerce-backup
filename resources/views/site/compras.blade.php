@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="jumbotron">
-  <h1 class="display-3 font-weight-bold">Veículos</h1>
+  <h1 class="display-3 font-weight-bold">Suas compras</h1>
   <hr class="my-3">
   <p class="lead font-weight-bold">Conheça os veículos disponíveis em nossa plataforma.</p>
 </div>

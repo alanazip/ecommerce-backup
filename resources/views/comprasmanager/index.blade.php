@@ -6,7 +6,7 @@
     <hr class="my-4">
 </div>
 <div class="container">
-    <a class="btn btn-success font-weight-bold" href="{{ route('estoquesmanager.create') }}">Adicionar Novo Veículo</a>
+    <a class="btn btn-success font-weight-bold" href="{{ route('comprasmanager.create') }}">Adicionar Novo Veículo</a>
     <p></p>
     @if ($message = Session::get('success'))
     <p></p>
@@ -27,22 +27,22 @@
             <th>Preço</th>
             <th width="280px">Ação</th>
         </tr>
-        @foreach ($estoques as $estoque)
+        @foreach ($compras as $compra)
         <tr>
             <td>{{ ++$i }}</td>
-            <td>{{ $estoque->marca }}</td>
-            <td>{{ $estoque->modelo }}</td>
-            <td>{{ $estoque->cor }}</td>
-            <td>{{ $estoque->anoFabricacao }}</td>
-            <td>{{ $estoque->modeloAno }}</td>
-            <td>{{ $estoque->combustivel }}</td>
-            <td>{{ $estoque->preco }}</td>
+            <td>{{ $compra->marca }}</td>
+            <td>{{ $compra->modelo }}</td>
+            <td>{{ $compra->cor }}</td>
+            <td>{{ $compra->anoFabricacao }}</td>
+            <td>{{ $compra->modeloAno }}</td>
+            <td>{{ $compra->combustivel }}</td>
+            <td>{{ $compra->preco }}</td>
             <td>
-                <form action="{{ route('estoquesmanager.destroy', $estoque->id) }}" method="POST">
+                <form action="{{ route('comprasmanager.destroy', $compra->id) }}" method="POST">
 
-                    <a class="btn btn-info" href="{{ route('estoquesmanager.show', $estoque->id) }}">Exibir Detalhes</a>
+                    <a class="btn btn-info" href="{{ route('comprasmanager.show', $compra->id) }}">Exibir Detalhes</a>
 
-                    <a class="btn btn-primary" href="{{ route('estoquesmanager.edit', $estoque->id) }}">Editar</a>
+                    <a class="btn btn-primary" href="{{ route('comprasmanager.edit', $compra->id) }}">Editar</a>
 
                     @csrf
                     @method('DELETE')
@@ -54,7 +54,7 @@
         @endforeach
     </table>
 
-    {!! $estoques->links() !!}
+    {!! $compras->links() !!}
 </div>
 
 @endsection

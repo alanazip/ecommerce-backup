@@ -6,45 +6,45 @@
     <hr class="my-4">
 </div>
 <div class="container">
-    <a class="btn btn-primary" href="{{ route('estoquesmanager.index') }}">Voltar</a>
+    <a class="btn btn-primary" href="{{ route('comprasmanager.index') }}">Voltar</a>
     <p></p>
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Marca:</strong>
-                {{ $estoque->marca }}
+                {{ $compra->marca }}
             </div>
             <div class="form-group">
                 <strong>Modelo:</strong>
-                {{ $estoque->modelo }}
+                {{ $compra->modelo }}
             </div>
             <div class="form-group">
                 <strong>Cor:</strong>
-                {{ $estoque->cor }}
+                {{ $compra->cor }}
             </div>
             <div class="form-group">
                 <strong>Ano de Fabricação:</strong>
-                {{ $estoque->anoFabricacao }}
+                {{ $compra->anoFabricacao }}
             </div>
             <div class="form-group">
                 <strong>Ano do Modelo:</strong>
-                {{ $estoque->modeloAno }}
+                {{ $compra->modeloAno }}
             </div>
             <div class="form-group">
                 <strong>Combustível:</strong>
-                {{ $estoque->combustivel }}
+                {{ $compra->combustivel }}
             </div>
             <div class="form-group">
                 <strong>Preço:</strong>
-                {{ $estoque->preco }}
+                {{ $compra->preco }}
             </div>
             <div class="form-group">
                 <strong>Detalhes:</strong>
-                {{ $estoque->detalhes }}
+                {{ $compra->detalhes }}
             </div>
             <div class="form-group">
                 <strong>Imagem:</strong>
-                {{ $estoque->imagem }}
+                {{ $compra->imagem }}
             </div>
         </div>
     </div>

@@ -6,7 +6,7 @@
     <hr class="my-4">
 </div>
 <div class="container">
-    <a class="btn btn-success font-weight-bold" href="{{ route('estoquesmanager.create') }}">Adicionar Novo Veículo</a>
+    <a class="btn btn-success font-weight-bold" href="{{ route('produtosmanager.create') }}">Adicionar Novo Veículo</a>
     <p></p>
     @if ($message = Session::get('success'))
     <p></p>
@@ -27,22 +27,22 @@
             <th>Preço</th>
             <th width="280px">Ação</th>
         </tr>
-        @foreach ($estoques as $estoque)
+        @foreach ($produtos as $produto)
         <tr>
             <td>{{ ++$i }}</td>
-            <td>{{ $estoque->marca }}</td>
-            <td>{{ $estoque->modelo }}</td>
-            <td>{{ $estoque->cor }}</td>
-            <td>{{ $estoque->anoFabricacao }}</td>
-            <td>{{ $estoque->modeloAno }}</td>
-            <td>{{ $estoque->combustivel }}</td>
-            <td>{{ $estoque->preco }}</td>
+            <td>{{ $produto->marca }}</td>
+            <td>{{ $produto->modelo }}</td>
+            <td>{{ $produto->cor }}</td>
+            <td>{{ $produto->anoFabricacao }}</td>
+            <td>{{ $produto->modeloAno }}</td>
+            <td>{{ $produto->combustivel }}</td>
+            <td>{{ $produto->preco }}</td>
             <td>
-                <form action="{{ route('estoquesmanager.destroy', $estoque->id) }}" method="POST">
+                <form action="{{ route('produtosmanager.destroy', $produto->id) }}" method="POST">
 
-                    <a class="btn btn-info" href="{{ route('estoquesmanager.show', $estoque->id) }}">Exibir Detalhes</a>
+                    <a class="btn btn-info" href="{{ route('produtosmanager.show', $produto->id) }}">Exibir Detalhes</a>
 
-                    <a class="btn btn-primary" href="{{ route('estoquesmanager.edit', $estoque->id) }}">Editar</a>
+                    <a class="btn btn-primary" href="{{ route('produtosmanager.edit', $produto->id) }}">Editar</a>
 
                     @csrf
                     @method('DELETE')
@@ -54,7 +54,7 @@
         @endforeach
     </table>
 
-    {!! $estoques->links() !!}
+    {!! $produtos->links() !!}
 </div>
 
 @endsection

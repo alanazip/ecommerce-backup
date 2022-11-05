@@ -6,7 +6,7 @@
     <hr class="my-4">
 </div>
 <div class="container">
-    <a class="btn btn-warning" href="{{ route('estoquesmanager.index') }}">Voltar</a>
+    <a class="btn btn-warning" href="{{ route('categoriasmanager.index') }}">Voltar</a>
     <p></p>
 
     @if ($errors->any())
@@ -21,7 +21,7 @@
     </div>
     @endif
 
-    <form action="{{ route('estoquesmanager.store') }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('categoriasmanager.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
 
         <div class="row">

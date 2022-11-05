@@ -2,11 +2,11 @@
 
 @section('content')
 <div class="jumbotron">
-    <h1 class="display-4">Vendedores</h1>
+    <h1 class="display-4">fornecedores</h1>
     <hr class="my-4">
 </div>
 <div class="container">
-    <a class="btn btn-warning" href="{{ route('site.vendedores') }}">Criar novo vendedor</a>
+    <a class="btn btn-warning" href="{{ route('site.fornecedores') }}">Criar novo fornecedor</a>
     <p></p>
     @if ($message = Session::get('success'))
     <p></p>
@@ -23,17 +23,17 @@
             <th>Data</th>
             <th width="280px">Ação</th>
         </tr>
-        @foreach ($vendedores as $vendedor)
+        @foreach ($fornecedores as $fornecedor)
         <tr class="col-6">
             <td>{{ ++$i }}</td>
-            <td>{{ $vendedor->nome}}</td>
-            <td>{{ $vendedor->telefone}}</td>
-            <td>{{ $vendedor->email}}</td>
-            <td>{{ $vendedor->created_at}}</td>
+            <td>{{ $fornecedor->nome}}</td>
+            <td>{{ $fornecedor->telefone}}</td>
+            <td>{{ $fornecedor->email}}</td>
+            <td>{{ $fornecedor->created_at}}</td>
             <td>
-                <form action="{{ route('vendedoresmanager.destroy', $vendedor->id) }}" method="POST">
+                <form action="{{ route('fornecedoresmanager.destroy', $fornecedor->id) }}" method="POST">
                     
-                    <a class="btn btn-info" href="{{ route('vendedoresmanager.show', $vendedor->id) }}" value="Exibir">Exibir</a>
+                    <a class="btn btn-info" href="{{ route('fornecedoresmanager.show', $fornecedor->id) }}" value="Exibir">Exibir</a>
 
                     @csrf
                     @method('DELETE')
@@ -46,7 +46,7 @@
         @endforeach
     </table>
 
-    {!! $vendedores->links() !!}
+    {!! $fornecedores->links() !!}
 </div>
 
 @endsection

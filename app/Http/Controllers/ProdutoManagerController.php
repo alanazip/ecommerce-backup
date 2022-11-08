@@ -14,7 +14,7 @@ class ProdutoManagerController extends Controller
      */
     public function index()
     {
-        $produtos = Produto::orderby('marca', 'asc')->simplepaginate(5);
+        $produtos = Produto::orderby('nome', 'asc')->simplepaginate(5);
         return view('produtosmanager.index', compact('produtos'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
@@ -42,7 +42,9 @@ class ProdutoManagerController extends Controller
             'descricao' => 'required',
             'preco' => 'required',
             'quantidade' => 'required',
-            'imagem' => 'required',
+            'categoria_id' => 'required',
+            'fornecedor_id' => 'required',
+            // 'imagem' => 'required'
         ]);
 
         // Produto::create($request->all());
@@ -52,22 +54,24 @@ class ProdutoManagerController extends Controller
         $produto->descricao = $request->descricao;
         $produto->preco = $request->preco;
         $produto->quantidade = $request->quantidade;
-        $produto->imagem = "";
-        $dirImagem = "images/produto/";
+        $produto->categoria_id = $request->categoria_id;
+        $produto->fornecedor_id = $request->fornecedor_id;
+        
 
-        if ($request->hasFile('imagem') && $request->file('imagem')->isValid()) {
-            $requestImage = $request->imagem;
-            $extension = $requestImage->extension();
 
-            $imageName = md5($requestImage->getClientOriginalName() . strtotime('now')) . "." . $extension;
+        // if ($request->hasFile('imagem') && $request->file('imagem')->isValid()) {
+        //     $requestImage = $request->imagem;
+        //     $extension = $requestImage->extension();
 
-            $requestImage->move(public_path($dirImagem), $imageName);
-            $produto->imagem = $dirImagem . $imageName;
-        }
+        //     $imageName = md5($requestImage->getClientOriginalName() . strtotime('now')) . "." . $extension;
+
+        //     $requestImage->move(public_path($dirImagem), $imageName);
+        //     $produto->imagem = $dirImagem . $imageName;
+        // }
 
         $produto->save();
 
-        return redirect()->route('produtosmanager.index')->with('success', 'Veículo cadastrado com sucesso!');
+        return redirect()->route('produtosmanager.index')->with('success', 'Jogo cadastrado com sucesso!');
     }
 
     /**
@@ -110,14 +114,16 @@ class ProdutoManagerController extends Controller
             'descricao' => 'required',
             'preco' => 'required',
             'quantidade' => 'required',
-            'imagem' => 'required'
+            'categoria_id' => 'required',
+            'fornecedor_id' => 'required',
+            // 'imagem' => 'required'
         ]);
 
         $data = $request->all();
 
         Produto::findOrFail($id)->update($data);
 
-        return redirect()->route('produtosmanager.index')->with('success', 'Produto atualizado com sucesso!');
+        return redirect()->route('produtosmanager.index')->with('success', 'Jogo atualizado com sucesso!');
     }
 
     /**
@@ -130,6 +136,6 @@ class ProdutoManagerController extends Controller
     {
         produto::findOrFail($id)->delete();
 
-        return redirect()->route('produtosmanager.index')->with('success', 'Cadastro de produto excluido com sucesso!');
+        return redirect()->route('produtosmanager.index')->with('success', 'Jogo excluido com sucesso!');
     }
 }

@@ -12,18 +12,18 @@ class Produto extends Model
         'descricao',
         'preco',
         'quantidade',
-        'catgoria_id',
+        'categoria_id',
         'fornecedor_id'
     ];
 
     public function categoria()
     {
-        return $this->belongsToTo(Categoria::class);
+        return $this->belongsToMany(Categoria::class);
     }
 
     public function fornecedor()
     {
-        return $this->belongsToTo(Fornecedor::class);
+        return $this->belongsToMany(Fornecedor::class);
     }
 
     use HasFactory;

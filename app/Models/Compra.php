@@ -13,7 +13,7 @@ class Compra extends Model
     ];
 
     public function user(){
-        return $this->belongsToTo(User::class);
+        return $this->belongsToMany(User::class);
     }
 
     use HasFactory;

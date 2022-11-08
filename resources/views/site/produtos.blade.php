@@ -3,9 +3,9 @@
 @section('content')
 
 <div class="jumbotron">
-  <h1 class="display-3 font-weight-bold">Veículos</h1>
+  <h1 class="display-3 font-weight-bold">Games</h1>
   <hr class="my-3">
-  <p class="lead font-weight-bold">Conheça os veículos disponíveis em nossa plataforma.</p>
+  <p class="lead font-weight-bold">Conheça os jogos disponíveis em nossa plataforma.</p>
 </div>
 
 <div class="container">
@@ -13,20 +13,12 @@
   @foreach($produtos as $produto)
   <div class="row featurette-divider">
     <div class="col-md-3">
-      <h2 class="lead">{{ $produto->marca }}</h2>
-      <p class="lead">{{ $produto->modelo }}</p>
-      <p class="lead">{{ $produto->cor }}</p>
-      <p class="lead">{{ $produto->anoFabricacao }}</p>
-      <p class="lead">{{ $produto->modeloAno }}</p>
-      <p class="lead">{{ $produto->combustivel }}</p>
+      <h2 class="lead">{{ $produto->nome }}</h2>
+      <p class="lead">{{ $produto->descricao }}</p>
       <p class="lead">{{ $produto->preco }}</p>
-      <p class="lead">{{ $produto->detalhes }}</p>
-    </div>
-    <div class="col-md-3">
-      <figure class="figure">
-        <!-- {{-- <img src="/images/produto/{{ $produto->imagem }}" class="figure-img img-fluid rounded" alt="{{ $produto->nome }}">--}} -->
-        <img src="{{ asset($produto->imagem) }}" class="figure-img img-fluid rounded" alt="{{ $produto->marca }}">
-      </figure>
+      <p class="lead">{{ $produto->quantidade }}</p>
+      <p class="lead">{{ $produto->categoria_id }}</p>
+      <p class="lead">{{ $produto->fornecedor_id }}</p>
     </div>
   </div>
   <hr class="featurette-divider">

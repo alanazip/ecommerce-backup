@@ -2,11 +2,11 @@
 
 @section('content')
 <div class="jumbotron">
-    <h1 class="display-4">Cadastro de Veículos</h1>
+    <h1 class="display-4">Cadastro de Categorias</h1>
     <hr class="my-4">
 </div>
 <div class="container">
-    <a class="btn btn-success font-weight-bold" href="{{ route('categoriasmanager.create') }}">Adicionar Novo Veículo</a>
+    <a class="btn btn-success font-weight-bold" href="{{ route('site.categorias') }}">Adicionar Nova Categoria</a>
     <p></p>
     @if ($message = Session::get('success'))
     <p></p>
@@ -15,15 +15,15 @@
     </div>
     @endif
 
-    <table class="table table-bordered">
+    <table class="table table-bordered text-white">
         <tr>
-            <th>Descrição:</th>
-            <th width="280px">Ação</th>
+            <th>#</th>
+            <th>Categoria:</th>
         </tr>
         @foreach ($categorias as $categoria)
         <tr>
             <td>{{ ++$i }}</td>
-            <td>{{ $categoria->descricao }}</td>
+            <td>{{ $categoria->nome }}</td>
             <td>
                 <form action="{{ route('categoriasmanager.destroy', $categoria->id) }}" method="POST">
 

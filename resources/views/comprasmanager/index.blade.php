@@ -2,11 +2,11 @@
 
 @section('content')
 <div class="jumbotron">
-    <h1 class="display-4">Cadastro de Veículos</h1>
+    <h1 class="display-4">Cadastro de Jogos</h1>
     <hr class="my-4">
 </div>
 <div class="container">
-    <a class="btn btn-success font-weight-bold" href="{{ route('comprasmanager.create') }}">Adicionar Novo Veículo</a>
+    <a class="btn btn-success font-weight-bold" href="{{ route('comprasmanager.create') }}">Adicionar Novo Jogo</a>
     <p></p>
     @if ($message = Session::get('success'))
     <p></p>
@@ -18,25 +18,15 @@
     <table class="table table-bordered">
         <tr>
             <th>#</th>
-            <th>Marca</th>
-            <th>Modelo</th>
-            <th>Cor</th>
-            <th>Ano de Fabricação</th>
-            <th>Ano do Modelo</th>
-            <th>Combustivel</th>
-            <th>Preço</th>
+            <th>Status</th>
+            <th>Id Usuário</th>
             <th width="280px">Ação</th>
         </tr>
         @foreach ($compras as $compra)
         <tr>
             <td>{{ ++$i }}</td>
-            <td>{{ $compra->marca }}</td>
-            <td>{{ $compra->modelo }}</td>
-            <td>{{ $compra->cor }}</td>
-            <td>{{ $compra->anoFabricacao }}</td>
-            <td>{{ $compra->modeloAno }}</td>
-            <td>{{ $compra->combustivel }}</td>
-            <td>{{ $compra->preco }}</td>
+            <td>{{ $compra->status }}</td>
+            <td>{{ $compra->user_id }}</td>
             <td>
                 <form action="{{ route('comprasmanager.destroy', $compra->id) }}" method="POST">
 

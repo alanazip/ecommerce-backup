@@ -2,11 +2,11 @@
 
 @section('content')
 <div class="jumbotron">
-    <h1 class="display-4">Cadastro de Veículos</h1>
+    <h1 class="display-4">Cadastro de Jogos</h1>
     <hr class="my-4">
 </div>
 <div class="container">
-    <a class="btn btn-success font-weight-bold" href="{{ route('produtosmanager.create') }}">Adicionar Novo Veículo</a>
+    <a class="btn btn-success font-weight-bold" href="{{ route('produtosmanager.create') }}">Adicionar Novo Jogo</a>
     <p></p>
     @if ($message = Session::get('success'))
     <p></p>
@@ -15,28 +15,26 @@
     </div>
     @endif
 
-    <table class="table table-bordered">
+    <table class="table table-bordered text-white">
         <tr>
             <th>#</th>
-            <th>Marca</th>
-            <th>Modelo</th>
-            <th>Cor</th>
-            <th>Ano de Fabricação</th>
-            <th>Ano do Modelo</th>
-            <th>Combustivel</th>
-            <th>Preço</th>
+            <th>Nome</th>
+            <th>Descricao</th>
+            <th>Preco</th>
+            <th>Quantidade</th>
+            <th>Categoria</th>
+            <th>Fornecedor</th>
             <th width="280px">Ação</th>
         </tr>
         @foreach ($produtos as $produto)
         <tr>
             <td>{{ ++$i }}</td>
-            <td>{{ $produto->marca }}</td>
-            <td>{{ $produto->modelo }}</td>
-            <td>{{ $produto->cor }}</td>
-            <td>{{ $produto->anoFabricacao }}</td>
-            <td>{{ $produto->modeloAno }}</td>
-            <td>{{ $produto->combustivel }}</td>
+            <td>{{ $produto->nome }}</td>
+            <td>{{ $produto->descricao }}</td>
             <td>{{ $produto->preco }}</td>
+            <td>{{ $produto->quantidade }}</td>
+            <td>{{ $produto->categoria_id }}</td>
+            <td>{{ $produto->fornecedor_id }}</td>
             <td>
                 <form action="{{ route('produtosmanager.destroy', $produto->id) }}" method="POST">
 

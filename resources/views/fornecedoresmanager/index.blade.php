@@ -15,20 +15,28 @@
     </div>
     @endif
 
-    <table class="table table-bordered">
+    <table class="table table-bordered text-white">
         <tr>
             <th>#</th>
             <th>Nome</th>
-            <th>Mensagem</th>
-            <th>Data</th>
-            <th width="280px">Ação</th>
+            <th>Telefone</th>
+            <th>CEP</th>
+            <th>Logradouro</th>
+            <th>Cidade</th>
+            <th>Estado</th>
+            <th>Razão Social</th>
+            <th width="280px">Data/Hora de Cadastro</th>
         </tr>
         @foreach ($fornecedores as $fornecedor)
         <tr class="col-6">
             <td>{{ ++$i }}</td>
             <td>{{ $fornecedor->nome}}</td>
             <td>{{ $fornecedor->telefone}}</td>
-            <td>{{ $fornecedor->email}}</td>
+            <td>{{ $fornecedor->cep}}</td>
+            <td>{{ $fornecedor->logradouro}}</td>
+            <td>{{ $fornecedor->cidade}}</td>
+            <td>{{ $fornecedor->estado}}</td>
+            <td>{{ $fornecedor->razao_social}}</td>
             <td>{{ $fornecedor->created_at}}</td>
             <td>
                 <form action="{{ route('fornecedoresmanager.destroy', $fornecedor->id) }}" method="POST">

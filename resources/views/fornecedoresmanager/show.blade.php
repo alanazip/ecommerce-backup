@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="jumbotron">
-    <h1 class="display-4">fornecedor</h1>
+    <h1 class="display-4">Fornecedor</h1>
     <hr class="my-4">
 </div>
 <div class="container">
@@ -23,8 +23,34 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>E-mail:</strong>
-                {{ $fornecedor->email }}
+                <strong>CEP:</strong>
+                {{ $fornecedor->cep }}
+            </div>
+        </div>
+        <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Logradouro:</strong>
+                {{ $fornecedor->logradouro }}
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Cidade:</strong>
+                {{ $fornecedor->cidade }}
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Estado:</strong>
+                {{ $fornecedor->estado }}
+            </div>
+        </div>
+        <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Razão social:</strong>
+                {{ $fornecedor->razao_social }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">

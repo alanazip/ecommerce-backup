@@ -21,6 +21,7 @@
         <li class="nav-item {{ (Route::current()->getName() === 'site.home' ? ' active' : '') }}"><button><a class="nav-link text-dark my-3 font-weight-bold" href="{{ route('site.home') }}">Página inicial<span class="sr-only">(current)</span></a></button></li>
         <li class="nav-item {{ (Route::current()->getName() === 'site.compras' ? ' active' : '') }}"><button><a class="nav-link text-dark my-3 font-weight-bold" href="{{ route('site.compras') }}">Compras</a></button></li>
         <li class="nav-item {{ (Route::current()->getName() === 'site.contatos' ? ' active' : '') }}"><button><a class="nav-link text-dark my-3 font-weight-bold" href="{{ route('site.contatos') }}">Contatos</a></button></li>
+        <li class="nav-item {{ (Route::current()->getName() === 'site.categorias' ? ' active' : '') }}"><button><a class="nav-link text-dark my-3 font-weight-bold" href="{{ route('site.categorias') }}">Categorias</a></button></li>
         <li class="nav-item {{ (Route::current()->getName() === 'site.fornecedores' ? ' active' : '') }}"><button><a class="nav-link text-dark my-3 font-weight-bold" href="{{ route('fornecedoresmanager.index') }}">Fornecedores</a></button></li>
         <li><div class="dropdown">
             <button class="btn btn-danger dropdown-toggle my-3 font-weight-bold" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

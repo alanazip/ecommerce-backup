@@ -31,9 +31,9 @@
 
         <div class="container">
           <div class="carousel-caption">
-            <h1>Acesse carros semi-novos.</h1>
-            <p>Carros importados, marcas renomadas.</p>
-            <p><a class="btn btn-lg btn-warning font-weight-bold" href="/estoques">Ver mais</a></p>
+            <h1>Acesse jogos.</h1>
+            <p>Jogos de todas as franquias.</p>
+            <p><a class="btn btn-lg btn-warning font-weight-bold" href="/produtos">Ver mais</a></p>
           </div>
         </div>
       </div>
@@ -43,8 +43,8 @@
         <div class="container">
           <div class="carousel-caption text-right">
             <h1>Preços acessiveis.</h1>
-            <p>Todos semi-novos com garantia de 2 anos.</p>
-            <p><a class="btn btn-lg btn-warning font-weight-bold" href="/estoquesmanager">Visualizar Veículos</a></p>
+            <p>Toda a loja com 5% de desconto.</p>
+            <p><a class="btn btn-lg btn-warning font-weight-bold" href="/produtosmanager">Visualizar Jogos</a></p>
           </div>
         </div>
       </div>
@@ -71,19 +71,18 @@
 
 
 
-        <h2>Visão</h2>
-        <p>Ser referência no mercado pela excelência no relacionamento com os clientes e na comercialização de produtos e serviços no segmento automotivo.</p>
+        <h2>Categorias</h2>
+        <p>Jogos de todos os gêneros</p>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
         <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="https://assets.xboxservices.com/assets/f5/a1/f5a1e21d-c465-48ba-b72f-3fbe06d083b7.jpg?n=Minecraft_Sneaky-Slider-1084_The-Wild-Update_1600x675.jpg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text></svg>
-        <h2>Nossa História</h2>
-        <p>A Além Car Veículos é uma empresa que atua no comercio de veículos a mais de 25 anos, fundada no ano de 1993 a Além começou como toda micro-empresa, com uma pequena quantidade de veículos. Com o passar do tempo devido à luta, competência e perseverança de seu diretor e funcionários a empresa teve uma grande expansão no ramo, compramos, vendemos e financiamos veículos 0 km, semi-novos e usados. </p>
+        <h2>Destaques</h2>
+        <p>Acesse jogos que acabaram de lançar. </p>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
         <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="https://assets.xboxservices.com/assets/f5/a1/f5a1e21d-c465-48ba-b72f-3fbe06d083b7.jpg?n=Minecraft_Sneaky-Slider-1084_The-Wild-Update_1600x675.jpg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text></svg>
-        <h2>Lista de Vendedores</h2>
-        <p>Confira nossa lista de fornecedores, atendendo com foco na satisfação plena dos clientes. </p>
-        <p><a class="btn btn-warning font-weight-bold" href="/fornecedoresmanager">Fornecedores &raquo;</a></p>
+        <h2>Avaliações</h2>
+        <p>Conheça nosso feedback em tempo real </p>
       </div><!-- /.col-lg-4 -->
     </div><!-- /.row -->
 

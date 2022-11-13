@@ -7,6 +7,7 @@
     <title>G.A.L</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}" type="text/css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
 <body>
 
@@ -20,17 +21,17 @@
       <ul class="navbar-nav mr-auto">
         <li class="nav-item {{ (Route::current()->getName() === 'site.home' ? ' active' : '') }}"><button><a class="nav-link text-dark my-3 font-weight-bold" href="{{ route('site.home') }}">Página inicial<span class="sr-only">(current)</span></a></button></li>
         <li class="nav-item {{ (Route::current()->getName() === 'site.compras' ? ' active' : '') }}"><button><a class="nav-link text-dark my-3 font-weight-bold" href="{{ route('site.compras') }}">Compras</a></button></li>
-        <li class="nav-item {{ (Route::current()->getName() === 'site.contatos' ? ' active' : '') }}"><button><a class="nav-link text-dark my-3 font-weight-bold" href="{{ route('site.contatos') }}">Contatos</a></button></li>
+        <li class="nav-item {{ (Route::current()->getName() === 'site.contatos' ? ' active' : '') }}"><button><a class="nav-link text-dark my-3 font-weight-bold" href="{{ route('site.contatos') }}">Avaliações</a></button></li>
         <li class="nav-item {{ (Route::current()->getName() === 'site.categorias' ? ' active' : '') }}"><button><a class="nav-link text-dark my-3 font-weight-bold" href="{{ route('site.categorias') }}">Categorias</a></button></li>
         <li class="nav-item {{ (Route::current()->getName() === 'site.fornecedores' ? ' active' : '') }}"><button><a class="nav-link text-dark my-3 font-weight-bold" href="{{ route('fornecedoresmanager.index') }}">Fornecedores</a></button></li>
         <li><div class="dropdown">
-            <button class="btn btn-danger dropdown-toggle my-3 font-weight-bold" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <button class="btn btn-dark dropdown-toggle my-3 font-weight-bold" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Area Administrativa
               </button>
             <div class="dropdown-menu font-weight-bold" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item font-weight-bold" href="/produtosmanager/create">Adicionar Produto</a>
+            <a class="dropdown-item font-weight-bold" href="/produtosmanager/create">Adicionar Jogo</a>
             <a class="dropdown-item font-weight-bold" href="/fornecedores">Adicionar Fornecedores</a>
-            <a class="dropdown-item font-weight-bold" href="/contatosmanager">Visualizar Contatos</a>
+            <a class="dropdown-item font-weight-bold" href="/contatosmanager">Visualizar Avaliações</a>
             </div>
 </div></li>
       </ul>

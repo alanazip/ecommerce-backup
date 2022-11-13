@@ -1,7 +1,6 @@
 @extends('site.layout')
 
 @section('content')
-
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -53,7 +52,7 @@
         <div class="container">
           <div class="carousel-caption text-right">
             <h1>Preços acessiveis.</h1>
-            <p>Todos semi-novos com garantia de 2 anos.</p>
+            <p>Toda a loja com 5% de desconto.</p>
             <p><a class="btn btn-lg btn-warning font-weight-bold" href="/produtosmanager">Visualizar Jogos</a></p>
           </div>
         </div>
@@ -81,8 +80,8 @@
 
 
 
-        <h2>Contato</h2>
-        <p>Jogos de todos os generos</p>
+        <h2>Categorias</h2>
+        <p>Jogos de todos os gêneros</p>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
         <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="https://assets.xboxservices.com/assets/f5/a1/f5a1e21d-c465-48ba-b72f-3fbe06d083b7.jpg?n=Minecraft_Sneaky-Slider-1084_The-Wild-Update_1600x675.jpg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em"></text></svg>
